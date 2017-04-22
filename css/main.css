@@ -54,6 +54,9 @@
     background: #fff;
     top: 40px;
     left: 30px; }
+  .leave-application .apply-leave input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none; }
   .leave-application .leave-bucket {
     margin: 30px 0; }
     .leave-application .leave-bucket h3 {
@@ -88,10 +91,12 @@
       height: 30px;
       margin: 10px; }
     .leave-application .leave-bucket .btn-primary {
-      margin-top: 20px;
+      margin: 20px 0 10px;
       padding: 5px 50px; }
     .leave-application .leave-bucket .btn-primary.disabled {
       background: #898989; }
+    .leave-application .leave-bucket .success-msg {
+      color: #499226; }
   .leave-application .background-container {
     background-color: #393d46;
     min-height: 90px; }
@@ -119,6 +124,8 @@
         position: absolute;
         border: 15px solid transparent;
         border-top-color: #ff701a; }
+    .leave-application .navbar .navbar-nav li {
+      float: left; }
   .leave-application .btn-primary {
     background: #fe7600;
     border: none;
@@ -131,9 +138,12 @@
     margin: 10px 25px; }
   .leave-application .tavant-logout {
     margin: 10px; }
-  @media screen and (min-width: bp-tablet) and (max-width: bp-desktop) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .leave-application main {
-      background: #fff; }
+      display: none; }
     .leave-application .apply-leave button, .leave-application .apply-leave input, .leave-application .apply-leave select {
       width: 100%;
       margin-top: 20px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .leave-application .tavant-setting, .leave-application .tavant-logout {
+      display: none; } }

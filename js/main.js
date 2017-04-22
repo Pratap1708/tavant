@@ -44,6 +44,8 @@ LA.Controller = (function (context) {
         $el.leaveTable = $('.leave-table');
         $el.showEntries = $('#showEntries');
         $el.searchEntries = $('#search');
+        $el.succesMsg = $el.leaveBucketForm.find('.success-msg');
+        $el.leaveTableBody= $el.leaveTable.find('tbody');
     }
 
     /**
@@ -93,6 +95,7 @@ LA.Controller = (function (context) {
 
             });
         }
+        $el.leaveForm[0].reset();
         _renderLeaveBucket(leavesData);
     }
 
@@ -120,11 +123,14 @@ LA.Controller = (function (context) {
     	}
         event.preventDefault();
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             data: {data: leavesData},
-            url: "/someURL",
+            url: "http://localhost:3000/data/leaveSubmit.json",
             success: function(result) {
+                $el.leaveTableBody.html('');
+                $el.succesMsg.text(result.message);
                 console.info('Leave Application submitted successfully!');
+
             },
             error: function() {
                 console.info('Something went wrong!');
@@ -157,6 +163,7 @@ LA.Controller = (function (context) {
             $el.leaveTable.find('tbody').append(temp);
             $el.leaveTable.find('tbody tr').last().find('select').val(obj.leaveType);
         });
+        $el.succesMsg.text('');
         _enableSubmit();
     }
 

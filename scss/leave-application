@@ -24,6 +24,10 @@
 		    top: 40px;
 		    left: 30px;
 		}
+		input[type=date]::-webkit-inner-spin-button {
+		    -webkit-appearance: none;
+		    display: none;
+		}
 	}
 	.leave-bucket {
 		margin: 30px 0;
@@ -67,11 +71,14 @@
 			margin: 10px;
 		}
 		.btn-primary {
-			margin-top: 20px;
+			margin: 20px 0 10px;
 			padding: 5px 50px;
 		}
 		.btn-primary.disabled {
 			background: $text-color;
+		}
+		.success-msg {
+			color: $tavant-sucess;
 		}
 	}
 	.background-container {
@@ -111,6 +118,9 @@
 			    border-top-color: $active-tab;
 			}
 		}
+		.navbar-nav li {
+			float: left;
+		}
 	}
 	.btn-primary {
 		background: $primary-btn;
@@ -129,9 +139,9 @@
 		margin: 10px;
 	}
 
-	@media screen and (min-width: bp-tablet) and (max-width: bp-desktop) {
+	@media only screen and (min-width: 768px) and (max-width: 1023px) {
 	    main {
-			background: $tavant-white;
+			display: none;
 		}
 		.apply-leave {
 			button, input, select {
@@ -140,4 +150,10 @@
 			}
 		}
 	}
+	@media only screen and (min-width: 320px) and (max-width: 767px) {
+	    .tavant-setting, .tavant-logout {
+	    	display: none;
+	    }
+	}
+	
 }
