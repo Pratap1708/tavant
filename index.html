@@ -80,7 +80,7 @@
         </div>
         <div class="col-md-12">
            <label for="contact">Contact</label>
-          <input type="text" id="contact" name="contact">
+          <input type="text" id="contact" name="contact" pattern="[0-9]{10}" oninvalid="setCustomValidity('Please Enter Numbers only')">
         </div>
         <div class="col-md-12">
           <button class="btn btn-primary">Add To Bucket</button>
