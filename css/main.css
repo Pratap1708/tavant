@@ -45,7 +45,9 @@
     height: 40px;
     background: #fff; }
   .leave-application .apply-leave input {
-    line-height: 2.5; }
+    line-height: 2.5;
+    border: 1px solid #a6a6a6;
+    padding: 0 10px; }
   .leave-application .apply-leave label {
     position: absolute;
     padding: 0 2px;
@@ -72,7 +74,8 @@
       margin-bottom: 0;
       color: #898989; }
       .leave-application .leave-bucket table td {
-        padding: 5px 15px; }
+        padding: 5px 15px;
+        vertical-align: middle; }
       .leave-application .leave-bucket table th {
         padding: 10px 15px;
         background: #dbd9da; }
@@ -87,6 +90,8 @@
     .leave-application .leave-bucket .btn-primary {
       margin-top: 20px;
       padding: 5px 50px; }
+    .leave-application .leave-bucket .btn-primary.disabled {
+      background: #898989; }
   .leave-application .background-container {
     background-color: #393d46;
     min-height: 90px; }

@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/main.css" type="text/css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body class="leave-application container-fluid">
   <div class="row">
     <header class="clearfix">
       <div class="background-container col-sm-12">
         <div class="col-xs-6 logo-container">
-          <a href="#">
-            <img src="./assests/logo.png">
+          <a href="#" title="Home">
+            <img alt="Tavant logo" src="./assests/logo.png">
           </a>
         </div>
         <div class="col-xs-6 col-md-3 pull-right user-detail">
@@ -26,10 +27,10 @@
               </span>
             </li>
             <li class="tavant-icon tavant-setting">
-              <a href="#"></a>
+              <a href="#" title="Settings"></a>
             </li>
             <li class="tavant-icon tavant-logout">
-              <a href="#"></a>
+              <a href="#" title="Logout"></a>
             </li>
           </ul>
         </div>
@@ -54,7 +55,7 @@
 
       <section class="apply-leave clearfix">
         <h3>Apply Leave</h3>
-        <form class="row">
+        <form class="row leave-form" action="#">
         <div class="left-section col-md-8">
         <div class="col-md-6">
           <label for="leaveType">Leave Type</label>
@@ -66,17 +67,17 @@
         </div>
         <div class="col-md-6">
           <label for="startDate">Start date<sup>*</sup></label>
-          <input type="date" id="startDate" name="startDate">
+          <input type="date" id="startDate" name="startDate" required>
         </div>
         <div class="col-md-12">
           <label for="reason">Reason<sup>*</sup></label>
-          <input type="text" id="reason" name="reason">
+          <input type="text" id="reason" name="reason" required>
           </div>
         </div>
         <div class="right-section col-md-4">
         <div class="col-md-12">
           <label for="endDate">End Date<sup>*</sup></label>
-          <input type="date" id="endDate" name="endDate">
+          <input type="date" id="endDate" name="endDate" required>
         </div>
         <div class="col-md-12">
            <label for="contact">Contact</label>
@@ -90,10 +91,11 @@
       </section>
       <section class="leave-bucket clearfix">
         <h3>Leave Bucket <span class="pull-right minus-sign">-</span></h3>
-        <form>
+        <form class="leave-bucket-form">
         <div class="pull-left col-md-6">
-          <label for="leaveType">Show</label>
-          <select id="leaveType" name="leaveType">
+          <label for="showEntries">Show</label>
+          <select id="showEntries" name="showEntries">
+            <option>All</option>
             <option>2</option>
             <option>4</option>
             <option>6</option>
@@ -107,7 +109,7 @@
             <label for="search">Search</label>
             <input type="text" id="search" name="search">
           </div>
-          <table class="table">
+          <table class="table leave-table">
             <thead>
               <tr>
                 <th>Date</th>
@@ -118,10 +120,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- <tr>
                 <td>19/06/2017</td>
                 <td>Wednesday</td>
-                <td class="text-center"><input type="checkbox" id="" name="halfday"></td>
+                <td class="text-center">
+                  <label class="checkbox-label"></label>
+                  <input type="checkbox" name="halfday"></td>
                 <td>
                   <select id="leaveType" name="leaveType">
                     <option selected="selected">PL</option>
@@ -135,7 +139,9 @@
               <tr>
                 <td>20/06/2017</td>
                 <td>Thursday</td>
-                <td class="text-center"><input type="checkbox" id="" name="halfday"></td>
+                <td class="text-center">
+                  <label class="checkbox-label"></label>
+                  <input type="checkbox" id="" name="halfday"></td>
                 <td>
                   <select id="leaveType" name="leaveType">
                     <option>PL</option>
@@ -148,7 +154,9 @@
               <tr>
                 <td>21/06/2017</td>
                 <td>Friday</td>
-                <td class="text-center"><input type="checkbox" id="" name="halfday"></td>
+                <td class="text-center">
+                  <label class="checkbox-label"></label>
+                  <input type="checkbox" name="halfday"></td>
                 <td>
                   <select id="leaveType" name="leaveType">
                     <option selected="selected">PL</option>
@@ -157,10 +165,10 @@
                   </select>
                 </td>
                 <td class="text-center"><a href="#" class="tavant-icon tavant-delete"></a></td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
-          <button class="btn btn-primary pull-right">Submit</button>
+          <button class="btn btn-primary pull-right disabled">Submit</button>
         </form>
       </section>
       

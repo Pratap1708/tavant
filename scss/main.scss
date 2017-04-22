@@ -16,6 +16,8 @@
 		}
 		input {
 			line-height: 2.5;
+			border: 1px solid $input-border;
+			padding: 0 10px;
 		}
 		label {
 			position: absolute;
@@ -49,6 +51,7 @@
 			color: $text-color;
 			td {
 				padding: 5px 15px;
+				vertical-align: middle;
 			}
 			th {
 				padding: 10px 15px;
@@ -68,6 +71,9 @@
 		.btn-primary {
 			margin-top: 20px;
 			padding: 5px 50px;
+		}
+		.btn-primary.disabled {
+			background: $text-color;
 		}
 	}
 	.background-container {
