@@ -66,7 +66,7 @@
         </div>
         <div class="col-md-6">
           <label for="startDate">Start date<sup>*</sup></label>
-          <input type="date" id="startDate" name="startDate" required>
+          <input type="date" class="date" id="startDate" name="startDate" required>
         </div>
         <div class="col-md-12">
           <label for="reason">Reason<sup>*</sup></label>
@@ -76,11 +76,11 @@
         <div class="right-section col-md-4">
         <div class="col-md-12">
           <label for="endDate">End Date<sup>*</sup></label>
-          <input type="date" id="endDate" name="endDate" required>
+          <input type="date" class="date" id="endDate" name="endDate" required>
         </div>
         <div class="col-md-12">
            <label for="contact">Contact</label>
-          <input type="text" id="contact" name="contact" pattern="[0-9]{10}" oninvalid="setCustomValidity('Please Enter Numbers only')">
+          <input type="text" id="contact" name="contact">
         </div>
         <div class="col-md-12">
           <button class="btn btn-primary">Add To Bucket</button>
