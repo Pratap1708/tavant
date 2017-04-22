@@ -39,21 +39,21 @@
   .leave-application main {
     background: #fff; }
   .leave-application .apply-leave button, .leave-application .apply-leave input, .leave-application .apply-leave select {
-    width: 100%;
-    margin-top: 50px; }
+    margin-top: 50px;
+    width: 100%; }
   .leave-application .apply-leave select {
-    height: 40px;
-    background: #fff; }
+    background: #fff;
+    height: 40px; }
   .leave-application .apply-leave input {
-    line-height: 2.5;
     border: 1px solid #a6a6a6;
+    line-height: 2.5;
     padding: 0 10px; }
   .leave-application .apply-leave label {
+    background: #fff;
+    left: 30px;
     position: absolute;
     padding: 0 2px;
-    background: #fff;
-    top: 40px;
-    left: 30px; }
+    top: 40px; }
   .leave-application .apply-leave input[type=date]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: none; }
@@ -62,34 +62,42 @@
     .leave-application .leave-bucket h3 {
       background: #666666;
       color: #fff;
-      margin-bottom: 0;
       font-size: 20px;
+      margin-bottom: 0;
       padding: 10px 0 10px 10px; }
     .leave-application .leave-bucket .minus-sign {
+      background: #ff701a;
+      margin-right: 0;
       padding: 20px;
       line-height: 0.1;
       position: relative;
-      top: -10px;
-      background: #ff701a; }
+      top: -10px; }
+    .leave-application .leave-bucket input {
+      border: 1px solid #a6a6a6;
+      line-height: 2;
+      margin-bottom: 10px;
+      padding: 0 10px; }
     .leave-application .leave-bucket form {
       border: 1px solid #dfdfdf; }
     .leave-application .leave-bucket table {
-      margin-bottom: 0;
-      color: #898989; }
+      color: #898989;
+      margin-bottom: 0; }
       .leave-application .leave-bucket table td {
         padding: 5px 15px;
         vertical-align: middle; }
       .leave-application .leave-bucket table th {
-        padding: 10px 15px;
-        background: #dbd9da; }
+        background: #dbd9da;
+        padding: 10px 15px; }
       .leave-application .leave-bucket table select {
-        width: 50%;
-        margin: 0; }
+        margin: 0;
+        width: 50%; }
     .leave-application .leave-bucket select {
-      width: 25%;
       background: #fff;
       height: 30px;
-      margin: 10px; }
+      margin: 10px 3px;
+      width: 25%; }
+    .leave-application .leave-bucket span {
+      margin-right: 10px; }
     .leave-application .leave-bucket .btn-primary {
       margin: 20px 0 10px;
       padding: 5px 50px; }
@@ -113,17 +121,18 @@
   .leave-application .navbar {
     border: none; }
     .leave-application .navbar .active a {
-      background-color: #ff701a; }
-      .leave-application .navbar .active a:hover {
+      background-color: #ff701a;
+      color: #fff; }
+      .leave-application .navbar .active a:hover, .leave-application .navbar .active a:focus {
         background-color: #ff701a; }
     .leave-application .navbar .arrow-down {
-      position: absolute;
-      left: 38%; }
+      left: 38%;
+      position: absolute; }
       .leave-application .navbar .arrow-down:after {
         content: ' ';
-        position: absolute;
         border: 15px solid transparent;
-        border-top-color: #ff701a; }
+        border-top-color: #ff701a;
+        position: absolute; }
     .leave-application .navbar .navbar-nav li {
       float: left; }
   .leave-application .btn-primary {
@@ -133,17 +142,22 @@
     font-size: 18px;
     letter-spacing: 2px; }
   .leave-application .tavant-icon {
-    color: #fff; }
+    color: #fff;
+    vertical-align: middle; }
   .leave-application .tavant-setting {
     margin: 10px 25px; }
   .leave-application .tavant-logout {
     margin: 10px; }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .leave-application main {
-      display: none; }
     .leave-application .apply-leave button, .leave-application .apply-leave input, .leave-application .apply-leave select {
-      width: 100%;
-      margin-top: 20px; } }
+      margin-top: 40px;
+      width: 100%; }
+    .leave-application .apply-leave label {
+      top: 30px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .leave-application .navbar-nav {
+      margin: 0 -15px; }
     .leave-application .tavant-setting, .leave-application .tavant-logout {
-      display: none; } }
+      display: none; }
+    .leave-application .leave-bucket .table {
+      font-size: 10px; } }

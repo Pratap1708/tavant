@@ -5,24 +5,24 @@
 	}
 	.apply-leave {
 		button, input, select {
-			width: 100%;
 			margin-top: 50px;
+			width: 100%;
 		}
 		select {
+			background: $tavant-white;
 			height: 40px;
-    		background: $tavant-white;
 		}
 		input {
-			line-height: 2.5;
 			border: 1px solid $input-border;
+			line-height: 2.5;
 			padding: 0 10px;
 		}
 		label {
-			position: absolute;
-		    padding: 0 2px;
 		    background: $tavant-white;
-		    top: 40px;
 		    left: 30px;
+		    position: absolute;
+		    padding: 0 2px;
+		    top: 40px;
 		}
 		input[type=date]::-webkit-inner-spin-button {
 		    -webkit-appearance: none;
@@ -34,41 +34,51 @@
 		h3 {
 			background: $accordion-heading;
 			color: $tavant-white;
-			margin-bottom: 0;
 			font-size: 20px;
+			margin-bottom: 0;
 			padding: 10px 0 10px 10px;
 		}
 		.minus-sign {
+			background: $active-tab;
+			margin-right: 0;
 			padding: 20px;
 			line-height: 0.1;
     		position: relative;
     		top: -10px;
-    		background: $active-tab;
+		}
+		input {
+			border: 1px solid $input-border;
+			line-height: 2;
+			margin-bottom: 10px;
+			padding: 0 10px;
 		}
 		form {
 			border: 1px solid $border-color;
 		}
 		table {
-			margin-bottom: 0;
 			color: $text-color;
+			margin-bottom: 0;
 			td {
 				padding: 5px 15px;
 				vertical-align: middle;
 			}
 			th {
-				padding: 10px 15px;
 				background: $accordion-subheading;
+				padding: 10px 15px;
 			}
 			select {
-				width: 50%;
 				margin: 0;
+				width: 50%;
 			}
 		}
 		select {
-			width: 25%;
 			background: $tavant-white;
 			height: 30px;
-			margin: 10px;
+			margin: 10px 3px;
+			width: 25%;
+		}
+		span {
+			margin-right: 10px;
 		}
 		.btn-primary {
 			margin: 20px 0 10px;
@@ -78,7 +88,7 @@
 			background: $text-color;
 		}
 		.success-msg {
-			color: $tavant-sucess;
+			color: $tavant-success;
 		}
 	}
 	.background-container {
@@ -104,18 +114,19 @@
 		border: none;
 		.active a {
 			background-color: $active-tab;
-			&:hover {
+			color: $tavant-white;
+			&:hover, &:focus {
 				background-color: $active-tab;
 			}
 		}
 		.arrow-down {
+			left: 38%;
 		    position: absolute;
-		    left: 38%;
 		    &:after {
 			    content: ' ';
-			    position: absolute;
 			    border: 15px solid transparent;
 			    border-top-color: $active-tab;
+			    position: absolute;
 			}
 		}
 		.navbar-nav li {
@@ -131,6 +142,7 @@
 	}
 	.tavant-icon {
 		color: $tavant-white;
+		vertical-align: middle;
 	}
 	.tavant-setting {
 		margin: 10px 25px;
@@ -140,19 +152,25 @@
 	}
 
 	@media only screen and (min-width: 768px) and (max-width: 1023px) {
-	    main {
-			display: none;
-		}
 		.apply-leave {
 			button, input, select {
+				margin-top: 40px;
 				width: 100%;
-				margin-top: 20px;
+			}
+			label {
+				top: 30px;
 			}
 		}
 	}
 	@media only screen and (min-width: 320px) and (max-width: 767px) {
+		.navbar-nav {
+			margin: 0 -15px;
+		}
 	    .tavant-setting, .tavant-logout {
 	    	display: none;
+	    }
+	    .leave-bucket .table {
+	    	font-size: 10px;
 	    }
 	}
 	

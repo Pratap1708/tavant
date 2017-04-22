@@ -121,6 +121,7 @@ LA.Controller = (function (context) {
     	if ($(this).find('.btn-primary').hasClass('disabled')) {
     		return;
     	}
+        //var ajaxUrl = $el.leaveBucketForm[0].getAttribute('data-ajax-url');
         event.preventDefault();
         $.ajax({
             type: 'GET',

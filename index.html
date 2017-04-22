@@ -52,7 +52,6 @@
     </nav>
 
     <main class="container">
-
       <section class="apply-leave clearfix">
         <h3>Apply Leave</h3>
         <form class="row leave-form" action="#">
@@ -92,8 +91,8 @@
 
       <section class="leave-bucket clearfix">
         <h3>Leave Bucket <span class="pull-right minus-sign">-</span></h3>
-        <form class="leave-bucket-form">
-        <div class="pull-left col-md-6 col-xs-12">
+        <form class="leave-bucket-form" data-ajax-url="http://localhost:3000/data/leaveSubmit.json">
+        <div class="pull-left col-md-9 col-xs-12">
           <label for="showEntries">Show</label>
           <select id="showEntries" name="showEntries">
             <option>All</option>
@@ -106,7 +105,7 @@
           <span>entries</span>
           <span>Duration:2</span>
           </div>
-          <div class="pull-right text-right col-md-6 col-xs-12">
+          <div class="pull-right text-right col-md-3 col-xs-12">
             <label for="search">Search</label>
             <input type="text" id="search" name="search">
           </div>
@@ -130,7 +129,6 @@
           <div class="col-md-12"><span class="pull-right success-msg"></span></div>
         </form>
       </section>
-      
     </main>
   </div>
   <script type="text/javascript" src="/js/main.js"></script>
