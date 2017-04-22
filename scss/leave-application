@@ -28,6 +28,11 @@
 		    -webkit-appearance: none;
 		    display: none;
 		}
+		.date-error {
+			color: $tavant-error;
+			font-style: italic;
+			margin-top: 10px;
+		}
 	}
 	.leave-bucket {
 		margin: 30px 0;

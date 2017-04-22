@@ -78,10 +78,10 @@ LA.Controller = (function (context) {
         endDate = new Date(endDate);
         noOfDays = _getNoOfDays(startDate, endDate);
         if (noOfDays < 0) {
-            alert('End date should be greater than start date');
+            $el.leaveForm.find('.date-error').text('End date should be greater than start date');
             return;
         }
-
+        $el.leaveForm.find('.date-error').text('');
         for (var i = 0; i <= noOfDays; i++) {
             currentDate = new Date();
             currentDate.setDate(startDate.getDate() + i);

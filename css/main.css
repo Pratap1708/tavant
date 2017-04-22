@@ -57,6 +57,10 @@
   .leave-application .apply-leave input[type=date]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: none; }
+  .leave-application .apply-leave .date-error {
+    color: #da1e1e;
+    font-style: italic;
+    margin-top: 10px; }
   .leave-application .leave-bucket {
     margin: 30px 0; }
     .leave-application .leave-bucket h3 {
